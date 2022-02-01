@@ -1,0 +1,118 @@
+@import url('http://fonts.cdnfonts.com/css/cocogoose');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+$font-main: 'COCOGOOSE', sans-serif;
+$font-second: 'Lato', sans-serif;
+$color-main: #ec5242;
+$color-second: #272a31;
+$color-third: #d3d3d3;
+
+.top-navbar {
+  background: $color-second;
+}
+
+.top-navbar {
+  a {
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: $font-second;
+  }
+
+  a:hover {
+    color: $color-third;
+  }
+
+  a:focus {
+    color: $color-third;
+  }
+}
+
+.background-header {
+  background-image: url("background-header-mobile.jpg");
+}
+
+.offcanvas {
+  background: $color-third;
+}
+
+.logo-container {
+  background: $color-second;
+}
+
+.logo {
+  width: 100%;
+}
+
+.btn-close {
+  background: transparent url("close-icon-white.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#headline {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+
+  h1 {
+    color: $color-main;
+    font-family: $font-main;
+    font-size: calc(1.7rem + 1.5vw);
+    background: linear-gradient(165deg, #fcaf21 20%, #f02800 50%, #f88020 75%, #f76050 99%);
+    background-clip: text;
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+   
+  }
+
+  h3 {
+    color: $color-main;
+    font-family: $font-second;
+    font-weight: 600;
+  }
+
+  p {
+    color: $color-second;
+    font-family: $font-second;
+    border: 3px solid white;
+    background: #fefefe;
+    padding: 8px;
+    font-weight: 600;
+  }
+
+  h2 {
+  color: $color-second;
+  font-family: $font-main;
+  }
+
+  h4 {
+    color: $color-second;
+    font-family: $font-second;
+    font-weight: 600;
+  }
+}
+
+@media (max-width:768px) {
+  .navbar-items {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width:768px) {
+  .navbar-bg {
+    background: white;
+  }
+
+  .logo {
+    width: auto;
+    height: 50px;
+  }
+
+  .shadow-nav {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  }
+}

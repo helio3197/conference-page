@@ -72,7 +72,7 @@ $color-third: #d3d3d3;
   h3 {
     color: $color-main;
     font-family: $font-second;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   p {
@@ -81,7 +81,7 @@ $color-third: #d3d3d3;
     border: 3px solid white;
     background: #fefefe;
     padding: 8px;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   h2 {
@@ -92,17 +92,143 @@ $color-third: #d3d3d3;
   h4 {
     color: $color-second;
     font-family: $font-second;
-    font-weight: 600;
+    font-weight: 700;
   }
 }
 
-@media (max-width:768px) {
+hr {
+  color: $color-main;
+  width: 46px;
+  height: 2px !important;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+#main-program {
+  background: url("background-main-program.png");
+
+  h1 {
+    color: $color-third;
+    font-family: $font-second;
+    font-weight: 700;
+  }
+
+  .col {
+    background: #8d8b8b3d;
+  }
+
+  .row {
+    column-gap: 1%;
+    row-gap: 12px;
+  }
+
+  h2 {
+    color: $color-main;
+    font-family: $font-second;
+    font-weight: 700;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  p {
+    color: $color-third;
+    margin: 0;
+    font-size: 0.75rem;
+  }
+}
+
+.connect-icon::before {
+  content: url("lecture.svg");
+  display: block;
+  width: 44px;
+}
+
+.enlightening-icon::before {
+  content: url("exhibition.svg");
+  display: block;
+  width: 44px;
+}
+
+.showcase-icon::before {
+  content: url("workshop.svg");
+  display: block;
+  width: 44px;
+}
+
+.forum-icon::before {
+  content: url("forum.svg");
+  display: block;
+  width: 44px;
+}
+
+.discussion-icon::before {
+  content: url("discussion.svg");
+  display: block;
+  width: 44px;
+}
+
+.button-join {
+  a {
+    text-decoration: none;
+    background: $color-main;
+    font-family: $font-second;
+    font-weight: 700;
+    color: white;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    padding: 16px 28px;
+    transition: color 0.5s, background 0.5s;
+  }
+
+  a:hover {
+    color: $color-main;
+    background: $color-third;
+    border: 2px solid $color-main;
+    padding: 14px 26px;
+  }
+}
+
+#featured-speakers {
+  h1 {
+    color: $color-second;
+    font-family: $font-second;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 400px) {
+  #main-program {
+    .program-description {
+      width: 50%;
+      margin-left: auto;
+      overflow: auto;
+    }
+  }
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+  #main-program {
+    .program-description {
+      width: 60%;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
   .navbar-items {
     font-size: 2rem;
   }
+
+  #main-program {
+    .program-title {
+      margin-left: auto;
+    }
+  }
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .navbar-bg {
     background: white;
   }
@@ -114,5 +240,35 @@ $color-third: #d3d3d3;
 
   .shadow-nav {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  }
+
+  #main-program {
+    .col {
+      width: 32.66%;
+    }
+
+    h2 {
+      font-size: calc(1.275rem + .3vw);
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
+
+    .icon-container {
+      height: 63.3px;
+    }
+
+    .program-description {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #main-program {
+    .col {
+      width: 19.2%;
+    }
   }
 }

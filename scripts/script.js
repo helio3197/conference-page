@@ -1,5 +1,20 @@
 const mobileDesktopQuery = window.matchMedia('(min-width: 768px)');
 
+const speakers = [
+  {
+    name: '',
+    position: '',
+    description: '',
+    profilePic: '',
+  },
+  {
+    name: '',
+    position: '',
+    description: '',
+    profilePic: '',
+  },
+];
+
 function mobileDesktopSwap(mediaQuery) {
   const navSlide = document.getElementById('navbarSlide');
   if (mediaQuery.matches) {

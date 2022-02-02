@@ -7,23 +7,43 @@ $color-main: #ec5242;
 $color-second: #272a31;
 $color-third: #d3d3d3;
 
-.top-navbar {
-  background: $color-second;
+.button-join {
+  a {
+    text-decoration: none;
+    background: $color-main;
+    font-family: $font-second;
+    font-weight: 700;
+    color: white;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    padding: 16px 28px;
+    transition: color 0.5s, background 0.5s;
+  }
+
+  a:hover {
+    color: $color-main;
+    background: $color-third;
+    border: 2px solid $color-main;
+    padding: 14px 26px;
+  }
 }
 
 .top-navbar {
-  a {
+  background: $color-second;
+
+  .a {
     color: white;
     padding-top: 4px;
     padding-bottom: 4px;
     font-family: $font-second;
   }
 
-  a:hover {
+  .a:hover {
     color: $color-third;
   }
 
-  a:focus {
+  .a:focus {
     color: $color-third;
   }
 }
@@ -31,14 +51,12 @@ $color-third: #d3d3d3;
 #navbar {
   .button-join {
     a {
-    padding: 6px 16px;
-    color: $color-main;
-    background: white;
-    border: 2px solid $color-main;
+      padding: 6px 16px;
+      color: $color-main;
+      background: white;
+      border: 2px solid $color-main;
     }
-  }
 
-  .button-join {
     a:hover {
       border-color: $color-main;
       color: white;
@@ -78,26 +96,19 @@ $color-third: #d3d3d3;
   padding-bottom: 3rem;
 
   h1 {
-    color: $color-main;
+    color: transparent;
     font-family: $font-main;
     font-size: calc(1.7rem + 1.5vw);
     background: linear-gradient(165deg, #fcaf21 20%, #f02800 50%, #f88020 75%, #f76050 99%);
-    background-clip: text;
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-   
   }
 
   .h1-about {
     text-align: center;
     color: $color-main;
     background: none;
-    -webkit-text-fill-color: currentColor;
-    -moz-text-fill-color: currentColor;
     max-width: 750px;
   }
 
@@ -118,8 +129,8 @@ $color-third: #d3d3d3;
   }
 
   h2 {
-  color: $color-second;
-  font-family: $font-main;
+    color: $color-second;
+    font-family: $font-main;
   }
 
   h4 {
@@ -200,28 +211,6 @@ hr {
   width: 44px;
 }
 
-.button-join {
-  a {
-    text-decoration: none;
-    background: $color-main;
-    font-family: $font-second;
-    font-weight: 700;
-    color: white;
-    display: block;
-    width: fit-content;
-    margin: auto;
-    padding: 16px 28px;
-    transition: color 0.5s, background 0.5s;
-  }
-
-  a:hover {
-    color: $color-main;
-    background: $color-third;
-    border: 2px solid $color-main;
-    padding: 14px 26px;
-  }
-}
-
 #featured-speakers {
   h1 {
     color: $color-second;
@@ -236,7 +225,7 @@ hr {
 
   .speaker-photo-bg {
     background: url("speaker-photo-bg.png");
-    aspect-ratio: 1;
+    aspect-ratio: 1/1;
     align-self: flex-start;
     background-size: 50% 50%;
     background-repeat: no-repeat;
@@ -286,6 +275,7 @@ hr {
 
 #partners {
   background: $color-second;
+
   h1 {
     color: $color-third;
     font-family: $font-second;
@@ -332,22 +322,22 @@ hr {
 }
 
 .image-overlay {
-  height: -webkit-fill-available;
+  height: calc(100% - 32px);
   top: 0;
   left: 0;
-  width: -webkit-fill-available;
+  width: calc(100% - 22px);
   margin: 16px 11px;
   background: #ff0e008a;
   transition: background 0.5s;
 
-  h2 {
+  .h2 {
     font-weight: 700;
     font-size: 8vw;
     font-family: $font-second;
     max-width: 90%;
   }
 
-  p {
+  .p {
     font-weight: 700;
     font-size: calc(2vw + 8px);
     font-family: $font-second;
@@ -407,7 +397,7 @@ hr {
   }
 
   .shadow-nav {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   }
 
   #headline {
@@ -436,7 +426,7 @@ hr {
     }
 
     h2 {
-      font-size: calc(1.275rem + .3vw);
+      font-size: calc(1.275rem + 0.3vw);
     }
 
     p {
@@ -454,12 +444,13 @@ hr {
 
   .image-overlay {
     margin: 0 11px;
+    height: 100%;
 
-    h2 {
+    .h2 {
       font-size: 4vw;
     }
 
-    p {
+    .p {
       font-size: 2vw;
     }
   }
@@ -467,7 +458,7 @@ hr {
   .about-footer#footer {
     background: $color-second;
 
-    h3{
+    h3 {
       color: white;
     }
   }

@@ -1,19 +1,37 @@
 @import url("http://fonts.cdnfonts.com/css/cocogoose");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.button-join a {
+  text-decoration: none;
+  background: #ec5242;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: white;
+  display: block;
+  width: fit-content;
+  margin: auto;
+  padding: 16px 28px;
+  transition: color 0.5s, background 0.5s;
+}
+.button-join a:hover {
+  color: #ec5242;
+  background: #d3d3d3;
+  border: 2px solid #ec5242;
+  padding: 14px 26px;
+}
+
 .top-navbar {
   background: #272a31;
 }
-
-.top-navbar a {
+.top-navbar .a {
   color: white;
   padding-top: 4px;
   padding-bottom: 4px;
   font-family: "Lato", sans-serif;
 }
-.top-navbar a:hover {
+.top-navbar .a:hover {
   color: #d3d3d3;
 }
-.top-navbar a:focus {
+.top-navbar .a:focus {
   color: #d3d3d3;
 }
 
@@ -59,24 +77,18 @@
   padding-bottom: 3rem;
 }
 #headline h1 {
-  color: #ec5242;
+  color: transparent;
   font-family: "COCOGOOSE", sans-serif;
   font-size: calc(1.7rem + 1.5vw);
   background: linear-gradient(165deg, #fcaf21 20%, #f02800 50%, #f88020 75%, #f76050 99%);
-  background-clip: text;
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
 }
 #headline .h1-about {
   text-align: center;
   color: #ec5242;
   background: none;
-  -webkit-text-fill-color: currentColor;
-  -moz-text-fill-color: currentColor;
   max-width: 750px;
 }
 #headline h3 {
@@ -169,25 +181,6 @@ hr {
   width: 44px;
 }
 
-.button-join a {
-  text-decoration: none;
-  background: #ec5242;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  color: white;
-  display: block;
-  width: fit-content;
-  margin: auto;
-  padding: 16px 28px;
-  transition: color 0.5s, background 0.5s;
-}
-.button-join a:hover {
-  color: #ec5242;
-  background: #d3d3d3;
-  border: 2px solid #ec5242;
-  padding: 14px 26px;
-}
-
 #featured-speakers h1 {
   color: #272a31;
   font-family: "Lato", sans-serif;
@@ -200,7 +193,7 @@ hr {
 }
 #speakers .speaker-photo-bg {
   background: url("speaker-photo-bg.png");
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   align-self: flex-start;
   background-size: 50% 50%;
   background-repeat: no-repeat;
@@ -283,21 +276,21 @@ hr {
 }
 
 .image-overlay {
-  height: -webkit-fill-available;
+  height: calc(100% - 32px);
   top: 0;
   left: 0;
-  width: -webkit-fill-available;
+  width: calc(100% - 22px);
   margin: 16px 11px;
   background: #ff0e008a;
   transition: background 0.5s;
 }
-.image-overlay h2 {
+.image-overlay .h2 {
   font-weight: 700;
   font-size: 8vw;
   font-family: "Lato", sans-serif;
   max-width: 90%;
 }
-.image-overlay p {
+.image-overlay .p {
   font-weight: 700;
   font-size: calc(2vw + 8px);
   font-family: "Lato", sans-serif;
@@ -381,11 +374,12 @@ hr {
 
   .image-overlay {
     margin: 0 11px;
+    height: 100%;
   }
-  .image-overlay h2 {
+  .image-overlay .h2 {
     font-size: 4vw;
   }
-  .image-overlay p {
+  .image-overlay .p {
     font-size: 2vw;
   }
 

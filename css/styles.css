@@ -17,6 +17,21 @@
   color: #d3d3d3;
 }
 
+#navbar .button-join a {
+  padding: 6px 16px;
+  color: #ec5242;
+  background: white;
+  border: 2px solid #ec5242;
+}
+#navbar .button-join a:hover {
+  border-color: #ec5242;
+  color: white;
+  background: #ec5242;
+}
+#navbar .current-page {
+  color: #ec5242;
+}
+
 .background-header {
   background-image: url("background-header-mobile.jpg");
 }
@@ -56,6 +71,14 @@
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
+#headline .h1-about {
+  text-align: center;
+  color: #ec5242;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  -moz-text-fill-color: currentColor;
+  max-width: 750px;
+}
 #headline h3 {
   color: #ec5242;
   font-family: "Lato", sans-serif;
@@ -69,6 +92,12 @@
   background: #fefefe;
   padding: 8px;
   font-weight: 700;
+}
+#headline .p-about {
+  font-weight: 400;
+  line-height: 200%;
+  text-align: center;
+  max-width: 800px;
 }
 #headline h2 {
   color: #272a31;
@@ -293,6 +322,9 @@ hr {
   }
   #headline h1 {
     font-size: 4rem;
+  }
+  #headline .h1-about {
+    font-size: 3rem;
   }
   #headline h3 {
     font-size: 1.75rem;

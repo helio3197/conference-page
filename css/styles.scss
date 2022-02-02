@@ -28,6 +28,29 @@ $color-third: #d3d3d3;
   }
 }
 
+#navbar {
+  .button-join {
+    a {
+    padding: 6px 16px;
+    color: $color-main;
+    background: white;
+    border: 2px solid $color-main;
+    }
+  }
+
+  .button-join {
+    a:hover {
+      border-color: $color-main;
+      color: white;
+      background: $color-main;
+    }
+  }
+
+  .current-page {
+    color: $color-main;
+  }
+}
+
 .background-header {
   background-image: url("background-header-mobile.jpg");
 }
@@ -69,6 +92,15 @@ $color-third: #d3d3d3;
    
   }
 
+  .h1-about {
+    text-align: center;
+    color: $color-main;
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    -moz-text-fill-color: currentColor;
+    max-width: 750px;
+  }
+
   h3 {
     color: $color-main;
     font-family: $font-second;
@@ -83,6 +115,13 @@ $color-third: #d3d3d3;
     background: #fefefe;
     padding: 8px;
     font-weight: 700;
+  }
+
+  .p-about {
+    font-weight: 400;
+    line-height: 200%;
+    text-align: center;
+    max-width: 800px;
   }
 
   h2 {
@@ -342,6 +381,10 @@ hr {
 
     h1 {
       font-size: 4rem;
+    }
+
+    .h1-about {
+      font-size: 3rem;
     }
 
     h3 {

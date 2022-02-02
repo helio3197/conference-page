@@ -73,6 +73,7 @@ $color-third: #d3d3d3;
     color: $color-main;
     font-family: $font-second;
     font-weight: 700;
+    font-size: 1.25rem;
   }
 
   p {
@@ -258,6 +259,37 @@ hr {
     font-family: $font-second;
     font-weight: 700;
   }
+
+  .partner-logo {
+    width: 100%;
+  }
+
+  .partner-logo-ibm {
+    width: 65%;
+  }
+
+  .row {
+    row-gap: 36px;
+  }
+}
+
+#footer {
+  .logo {
+    width: 100%;
+    height: auto;
+    max-width: 266px;
+  }
+
+  h3 {
+    color: $color-second;
+    font-family: $font-second;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .footer-description {
+    font-weight: 400;
+  }
 }
 
 @media (max-width: 400px) {
@@ -305,6 +337,22 @@ hr {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
   }
 
+  #headline {
+    min-height: 80vh;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
   #main-program {
     .col {
       width: 32.66%;
@@ -329,6 +377,12 @@ hr {
 }
 
 @media (min-width: 992px) {
+  #headline {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+
   #main-program {
     .col {
       width: 19.2%;

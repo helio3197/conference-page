@@ -197,6 +197,69 @@ hr {
   }
 }
 
+#speakers {
+  row-gap: 36px;
+  overflow: hidden;
+
+  .speaker-photo-bg {
+    background: url("speaker-photo-bg.png");
+    aspect-ratio: 1;
+    align-self: flex-start;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .speaker-name {
+    color: $color-second;
+    font-family: $font-second;
+    font-weight: 700;
+  }
+
+  .speaker-position {
+    color: $color-main;
+    font-family: $font-second;
+    font-style: italic;
+  }
+
+  .speaker-description {
+    color: $color-second;
+    font-family: $font-second;
+  }
+
+  .speaker-photo {
+    width: 80%;
+  }
+
+  hr {
+    color: $color-third;
+    width: 23px;
+    margin: 0 100% 0 0;
+    opacity: 1;
+  }
+}
+
+.caret {
+  color: $color-main;
+  margin-left: 1%;
+}
+
+.button-more {
+  color: $color-second;
+  font-family: $font-second;
+  font-weight: 700;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#partners {
+  background: $color-second;
+  h1 {
+    color: $color-third;
+    font-family: $font-second;
+    font-weight: 700;
+  }
+}
+
 @media (max-width: 400px) {
   #main-program {
     .program-description {

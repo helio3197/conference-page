@@ -6,7 +6,7 @@
 
 ![screenshot](./screenshot.png)
 
-The page contains all the information about the event and shows the user how to join the conference.
+This page contains all the information about the event and shows the user how to join the featured conference.
 
 ## Built With
 
@@ -65,6 +65,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Thanks to Microverse for the guidelines.
+- Original design by **Cindy Shin**: [LinkedIn](https://www.linkedin.com/in/adagio07/), [Behance](https://www.behance.net/adagio07)
 
 
 ## 📝 License

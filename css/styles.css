@@ -88,6 +88,7 @@
   background: linear-gradient(165deg, #fcaf21 20%, #f02800 50%, #f88020 75%, #f76050 99%);
   background-size: 100%;
   background-repeat: repeat;
+  background-clip: text;
   -webkit-background-clip: text;
 }
 #headline .h1-about {
@@ -96,11 +97,12 @@
   background: none;
   max-width: 750px;
 }
-#headline h3 {
+#headline span {
   color: #ec5242;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
+  display: block;
 }
 #headline p {
   color: #272a31;
@@ -354,7 +356,7 @@ hr {
   #headline .h1-about {
     font-size: 3rem;
   }
-  #headline h3 {
+  #headline span {
     font-size: 1.75rem;
   }
   #headline p {

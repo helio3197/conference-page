@@ -108,6 +108,7 @@ $color-third: #d3d3d3;
     background: linear-gradient(165deg, #fcaf21 20%, #f02800 50%, #f88020 75%, #f76050 99%);
     background-size: 100%;
     background-repeat: repeat;
+    background-clip: text;
     -webkit-background-clip: text;
   }
 
@@ -118,11 +119,12 @@ $color-third: #d3d3d3;
     max-width: 750px;
   }
 
-  h3 {
+  span {
     color: $color-main;
     font-family: $font-second;
     font-weight: 700;
     font-size: 1.25rem;
+    display: block;
   }
 
   p {
@@ -417,7 +419,7 @@ hr {
       font-size: 3rem;
     }
 
-    h3 {
+    span {
       font-size: 1.75rem;
     }
 

@@ -194,6 +194,10 @@ hr {
   font-weight: 700;
 }
 
+#speakers.animation {
+  transition: max-height 1s;
+}
+
 #speakers {
   row-gap: 36px;
   overflow: hidden;
@@ -216,6 +220,7 @@ hr {
   font-style: italic;
 }
 #speakers .speaker-description {
+  flex: 0 1 40%;
   color: #272a31;
   font-family: "Lato", sans-serif;
 }
@@ -324,7 +329,7 @@ hr {
     margin-left: auto;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar-items {
     font-size: 2rem;
   }
@@ -404,6 +409,10 @@ hr {
 
   #main-program .col {
     width: 19.2%;
+  }
+
+  #speakers .speaker-description {
+    flex: 0 1 auto;
   }
 }
 

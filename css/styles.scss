@@ -227,6 +227,10 @@ hr {
   }
 }
 
+#speakers.animation {
+  transition: max-height 1s;
+}
+
 #speakers {
   row-gap: 36px;
   overflow: hidden;
@@ -252,6 +256,7 @@ hr {
   }
 
   .speaker-description {
+    flex: 0 1 40%;
     color: $color-second;
     font-family: $font-second;
   }
@@ -382,7 +387,7 @@ hr {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar-items {
     font-size: 2rem;
   }
@@ -482,6 +487,12 @@ hr {
   #main-program {
     .col {
       width: 19.2%;
+    }
+  }
+
+  #speakers {
+    .speaker-description {
+      flex: 0 1 auto;
     }
   }
 }

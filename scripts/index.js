@@ -54,7 +54,7 @@ function addSpeakers(speakers) {
           <h2 class="speaker-name">${speakers[i].name}</h2>
           <h3 class="speaker-position fs-4">${speakers[i].position}</h3>
           <hr class="mx-0 my-auto">
-          <p class="speaker-description m-0">
+          <p class="speaker-description mb-0 mt-1">
           ${speakers[i].description}
           </p>
         </div>
@@ -68,15 +68,15 @@ function addSpeakers(speakers) {
 
 addSpeakers(speakers);
 
+const speakersContainer = document.getElementById('speakers');
+
 function speakersCollapse() {
   const collapsedHeight = document.getElementsByClassName('col-lg-6')[0].clientHeight + document.getElementsByClassName('col-lg-6')[1].clientHeight + 36;
-  const speakersContainer = document.getElementById('speakers');
-  speakersContainer.style.height = `${collapsedHeight}px`;
+  speakersContainer.style.maxHeight = `${collapsedHeight}px`;
 }
 
 function speakersExpand() {
-  const speakersContainer = document.getElementById('speakers');
-  speakersContainer.style.height = 'auto';
+  speakersContainer.style.maxHeight = `${speakersContainer.scrollHeight}px`;
 }
 
 const moreBtn = document.getElementById('more-btn');
@@ -89,20 +89,31 @@ if (!moreLessBtnQuery.matches) {
 function moreLessBtnFunc(mediaQuery) {
   if (mediaQuery.matches) {
     speakersExpand();
+    speakersContainer.style = '';
     if (!moreBtn.collapsed) {
       moreBtn.innerHTML = 'MORE<i class="fas fa-angle-down caret"></i>';
       moreBtn.collapsed = true;
     }
     window.removeEventListener('resize', () => {
-      if (moreBtn.collapsed && !moreLessBtnQuery.matches) {
-        speakersCollapse();
+      speakersContainer.classList.toggle('animation', false);
+      if (!moreLessBtnQuery.matches) {
+        if (moreBtn.collapsed) {
+          speakersCollapse();
+        } else {
+          speakersExpand();
+        }
       }
     });
   } else {
-    speakersCollapse();
+    window.onload = speakersCollapse;
     window.addEventListener('resize', () => {
-      if (moreBtn.collapsed && !moreLessBtnQuery.matches) {
-        speakersCollapse();
+      speakersContainer.classList.toggle('animation', false);
+      if (!moreLessBtnQuery.matches) {
+        if (moreBtn.collapsed) {
+          speakersCollapse();
+        } else {
+          speakersExpand();
+        }
       }
     });
   }
@@ -110,10 +121,12 @@ function moreLessBtnFunc(mediaQuery) {
 
 moreBtn.addEventListener('click', () => {
   if (moreBtn.collapsed) {
+    speakersContainer.classList.toggle('animation', true);
     speakersExpand();
     moreBtn.innerHTML = 'LESS<i class="fas fa-angle-up caret"></i>';
     moreBtn.collapsed = false;
   } else {
+    speakersContainer.classList.toggle('animation', true);
     speakersCollapse();
     moreBtn.innerHTML = 'MORE<i class="fas fa-angle-down caret"></i>';
     moreBtn.collapsed = true;

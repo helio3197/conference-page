@@ -27,17 +27,30 @@
 .top-navbar {
   background: #272a31;
 }
-.top-navbar .a {
+
+#second-nav-mobile a {
+  font-size: 1.25rem;
+  color: white;
+}
+#second-nav-mobile a:hover {
+  color: #d3d3d3;
+}
+
+.second-nav .a {
   color: white;
   padding-top: 4px;
   padding-bottom: 4px;
   font-family: "Lato", sans-serif;
 }
-.top-navbar .a:hover {
+.second-nav .a:hover {
   color: #d3d3d3;
 }
-.top-navbar .a:focus {
+.second-nav .a:focus {
   color: #d3d3d3;
+}
+
+.nav-wrap {
+  flex: 1;
 }
 
 #navbar .button-join a {
@@ -350,6 +363,10 @@ hr {
 
   .shadow-nav {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-wrap {
+    flex: 0 1 auto;
   }
 
   #headline {

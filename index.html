@@ -14,7 +14,7 @@
     <header id="navbar">
       <div class="container-fluid p-0 d-none d-md-block top-navbar">
         <div class="container-md p-0">
-          <nav class="nav justify-content-end">
+          <nav class="nav justify-content-end second-nav" id="second-nav">
             <a href="#" class="nav-item nav-link a"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="nav-item nav-link a"><i class="fab fa-twitter"></i></a>
             <a href="#" class="nav-item nav-link a">English</a>
@@ -28,7 +28,7 @@
           <button type="button" class="navbar-toggler border-0" data-bs-toggle="offcanvas" data-bs-target="#navbarSlide">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <nav class="offcanvas offcanvas-start navbar-collapse border-0" tabindex="-1" id="navbarSlide">
+          <nav class="offcanvas offcanvas-start navbar-collapse border-0 align-items-stretch" tabindex="-1" id="navbarSlide">
             <div class="offcanvas-header align-self-stretch  me-md-auto p-md-0 logo-container">
               <div class="offcanvas-title">
                 <a href="./index.html">
@@ -37,7 +37,7 @@
               </div>
               <button type="button" class="btn-close text-reset d-md-none" data-bs-dismiss="offcanvas" id="closeMenu"></button>
             </div>
-            <div class="navbar-nav navbar-items gap-md-4">
+            <div class="navbar-nav navbar-items gap-md-4 align-items-center nav-wrap">
               <a href="./about.html" class="nav-item nav-link current-page">About</a>
               <a href="#" class="nav-item nav-link">Program</a>
               <a href="#" class="nav-item nav-link">Sponsors</a>
@@ -45,6 +45,7 @@
               <div class="button-join">
                 <a href="#">Join WBS</a>
               </div>
+              <div class="second-nav d-flex d-md-none align-self-stretch mt-auto top-navbar justify-content-around flex-wrap" id="second-nav-mobile"></div>
             </div>
           </nav>
         </div>

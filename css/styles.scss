@@ -37,7 +37,20 @@ $color-third: #d3d3d3;
 
 .top-navbar {
   background: $color-second;
+}
 
+#second-nav-mobile {
+  a {
+    font-size: 1.25rem;
+    color: white;
+  }
+
+  a:hover {
+    color: $color-third;
+  }
+}
+
+.second-nav {
   .a {
     color: white;
     padding-top: 4px;
@@ -52,6 +65,10 @@ $color-third: #d3d3d3;
   .a:focus {
     color: $color-third;
   }
+}
+
+.nav-wrap {
+  flex: 1;
 }
 
 #navbar {
@@ -411,6 +428,10 @@ hr {
 
   .shadow-nav {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-wrap {
+    flex: 0 1 auto;
   }
 
   #headline {

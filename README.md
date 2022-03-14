@@ -37,7 +37,7 @@ To get a local copy up and running follow these simple steps.
 
 - Use this command to get a copy:
 ```
-git clone git@github.com:helio3197/conference-page.git
+$ git clone git@github.com:helio3197/conference-page.git
 ```
 ### Usage
 

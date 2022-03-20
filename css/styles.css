@@ -432,5 +432,13 @@ hr {
     flex: 0 1 auto;
   }
 }
+@media (min-width: 1400px) {
+  .image-overlay h2 {
+    font-size: 6rem;
+  }
+  .image-overlay p {
+    font-size: 2.5rem;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

@@ -517,3 +517,15 @@ hr {
     }
   }
 }
+
+@media (min-width: 1400px) {
+  .image-overlay {
+    h2 {
+      font-size: 6rem;
+    }
+
+    p {
+      font-size: 2.5rem;
+    }
+  }
+}
